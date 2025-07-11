@@ -179,21 +179,20 @@ static void sentry_safe_render_callback(Canvas* const canvas, void* ctx) {
     // Draw main code input line
     canvas_set_font(canvas, FontSecondary);
     char line[32] = {0};
+    int pos = 0;
+
     for(uint8_t i = 0; i < 5; i++) {
-        char part[6];
         if(i == state->selected_setting)
-            snprintf(part, sizeof(part), "[%d]", state->code[i]);
+            pos += snprintf(line + pos, sizeof(line) - pos, "[%d]", state->code[i]);
         else
-            snprintf(part, sizeof(part), " %d ", state->code[i]);
-        strcat(line, part);
+            pos += snprintf(line + pos, sizeof(line) - pos, " %d ", state->code[i]);
     }
 
     // Display P/S selector
-    strcat(line, "-");
     if(state->selected_setting == 5)
-        strcat(line, state->is_primary ? "[P]" : "[S]");
+        pos += snprintf(line + pos, sizeof(line) - pos, "-[%c]", state->is_primary ? 'P' : 'S');
     else
-        strcat(line, state->is_primary ? " P " : " S ");
+        pos += snprintf(line + pos, sizeof(line) - pos, "- %c ", state->is_primary ? 'P' : 'S');
 
     canvas_draw_frame(canvas, 14, 20, 100, 14);
 
