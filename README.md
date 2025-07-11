@@ -4,6 +4,9 @@ Plugin exploiting vulnerability to open any **Sentry Safe** or **Master Lock** e
 
 🔓 Based on the vulnerability described [here](https://github.com/H4ckd4ddy/bypass-sentry-safe)
 
+![Main interface](images/main.png)
+![Help](images/help.png)
+
 ## 📦 Installation
 
 👉 The plugin is now directly available via the **Flipper Zero Plugin Manager**:  
