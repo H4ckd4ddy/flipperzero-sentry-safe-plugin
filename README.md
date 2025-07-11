@@ -19,6 +19,7 @@ Plugin exploiting vulnerability to open any **Sentry Safe** or **Master Lock** e
 3. Tap **Install**
 4. Launch it from the menu on your Flipper.
 
+---
 
 ## 🛠 Usage
 
@@ -35,6 +36,7 @@ Plugin exploiting vulnerability to open any **Sentry Safe** or **Master Lock** e
 
 > You can enter `00000` to clear selected code.
 
+---
 
 ## 🧰 Manual Build (Optional)
 
@@ -53,6 +55,7 @@ If you prefer to build manually:
 
 For more info on the build tool, see the [official documentation](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/fbt.md).
 
+---
 
 ## 🙏 Thanks
 
